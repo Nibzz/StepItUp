@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="AvatarImage">
+        <attr name="avatar" format="reference" />
+        <attr name="hat" format="reference" />
+        <attr name="shirt" format="reference" />
+        <attr name="shoes" format="reference" />
+        <attr name="pants" format="reference" />
+
+    </declare-styleable>
+    <declare-styleable name="LifeStatText">
+        <attr name="toptext" format="string" />
+        <attr name="bottomtext" format="string" />
+    </declare-styleable>
+</resources>

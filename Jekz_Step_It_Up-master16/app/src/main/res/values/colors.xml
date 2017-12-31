@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#4169e1</color>
+    <color name="colorPrimaryDark">#003fae</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="shop_category_unfocused_text">#fdf3b4</color>
+    <color name="shop_category_unfocused_background">#614f4f</color>
+    <color name="shop_category_focused_background">#6d6a6a</color>
+    <color name="shop_inventory_background">#e8e0d8</color>
+    <color name="shop_background">#e2f3fa</color>
+    <color name="shop_dark_background">#4e4c60</color>
+    <color name="black">#000</color>
+    <color name="shop_buy_button">#65c878</color>
+    <color name="shop_buy_button_pressed">#016414</color>
+    <color name="equip_item_border">#b5bdbd</color>
+    <color name="equip_item_background">#cfd7d7</color>
+    <color name="equipped_item_background">#d1d3d5</color>
+    <color name="unequip_button_background_unpressed">#f1d7d7</color>
+    <color name="white">#fff</color>
+    <color name="friends_button">#FF8800</color>
+    <color name="friends_button_unpressed">#FFCC00</color>
+    <color name="red">#f53b38</color>
+    <color name="light_red">#f1302c</color>
+    <color name="accent">#ffffff</color>
+    <color name="iron">#CCCCCC</color>
+    <color name="colorPrimaryDarker">#00328b</color>
+</resources>

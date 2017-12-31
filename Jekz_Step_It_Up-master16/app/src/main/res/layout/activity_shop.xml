@@ -1,0 +1,392 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/shop_background"
+    app:layout_constraintTop_toBottomOf="@+id/model"
+    tools:layout_editor_absoluteY="25dp">
+
+    <FrameLayout
+        android:id="@+id/frame_layout_hat"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/equip_item_background"
+        app:layout_constraintBottom_toTopOf="@+id/guideline_upper_equip_bottom"
+        app:layout_constraintEnd_toStartOf="@+id/guideline_left_end"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/guideline_left_margin"
+        app:layout_constraintTop_toTopOf="@+id/model"
+        app:layout_constraintVertical_bias="0.0">
+
+        <ImageView
+            android:id="@+id/image_equipped_hat"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:contentDescription="@string/category_hats"
+            android:paddingTop="50dp"
+            android:scaleType="center"
+            tools:src="@drawable/cap_0" />
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/frame_layout_shirt"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/equip_item_background"
+        app:layout_constraintBottom_toTopOf="@+id/guideline_upper_equip_bottom"
+        app:layout_constraintEnd_toStartOf="@+id/guideline_right_margin"
+        app:layout_constraintStart_toStartOf="@+id/guideline_right_equip_start"
+        app:layout_constraintTop_toTopOf="@+id/model">
+
+        <ImageView
+            android:id="@+id/image_equipped_shirt"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:contentDescription="@string/category_shirts"
+            android:paddingBottom="25dp"
+            android:scaleType="center"
+            tools:src="@drawable/spotpjshirtblue_0" />
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/frame_layout_shoes"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/equip_item_background"
+        app:layout_constraintBottom_toTopOf="@+id/guideline_avatar_bottom"
+        app:layout_constraintEnd_toStartOf="@+id/guideline_right_margin"
+        app:layout_constraintStart_toStartOf="@+id/guideline_right_equip_start"
+        app:layout_constraintTop_toTopOf="@+id/guideline_lower_equip_top">
+
+        <ImageView
+            android:id="@+id/image_equipped_shoes"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:contentDescription="@string/category_shoes"
+            android:paddingBottom="100dp"
+            android:scaleType="center"
+            tools:src="@drawable/boots_0" />
+    </FrameLayout>
+
+
+    <FrameLayout
+        android:id="@+id/frame_layout_pants"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/equip_item_background"
+        app:layout_constraintBottom_toBottomOf="@+id/model"
+        app:layout_constraintEnd_toStartOf="@+id/guideline_left_end"
+        app:layout_constraintStart_toStartOf="@+id/guideline_left_margin"
+        app:layout_constraintTop_toTopOf="@+id/guideline_lower_equip_top">
+
+        <ImageView
+            android:id="@+id/image_equipped_pants"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:contentDescription="@string/category_pants"
+            android:paddingBottom="80dp"
+            android:scaleType="center"
+            tools:src="@drawable/dresspants_0" />
+    </FrameLayout>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recycler_view_shop"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginStart="16dp"
+        android:background="@drawable/shape_shop_background"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/categories"
+        tools:listitem="@layout/viewholder_shop_owneditem" />
+
+    <RadioGroup
+        android:id="@+id/categories"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toTopOf="@id/recycler_view_shop"
+        app:layout_constraintEnd_toEndOf="@id/recycler_view_shop"
+        app:layout_constraintStart_toStartOf="@id/recycler_view_shop"
+        app:layout_constraintTop_toBottomOf="@+id/guideline_top_friends">
+
+        <RadioButton
+            android:id="@+id/hat"
+            android:layout_width="wrap_content"
+            android:layout_height="32dp"
+            android:layout_marginEnd="2dp"
+            android:layout_weight="1"
+            android:background="@drawable/radiobutton"
+            android:button="@null"
+            android:fontFamily="sans-serif"
+            android:text="@string/category_hats"
+            android:textAlignment="center"
+            android:textAllCaps="true"
+            android:textColor="@drawable/radiobutton_text"
+            android:textSize="12sp"
+            android:typeface="normal" />
+
+        <RadioButton
+            android:id="@+id/shirts"
+            android:layout_width="wrap_content"
+            android:layout_height="32dp"
+            android:layout_marginEnd="2dp"
+            android:layout_weight="1"
+            android:background="@drawable/radiobutton"
+            android:button="@null"
+            android:text="@string/category_shirts"
+            android:textAlignment="center"
+            android:textAllCaps="true"
+            android:textColor="@drawable/radiobutton_text"
+            android:textSize="12sp"
+            android:typeface="normal" />
+
+        <RadioButton
+            android:id="@+id/pants"
+            android:layout_width="wrap_content"
+            android:layout_height="32dp"
+            android:layout_marginEnd="2dp"
+            android:layout_weight="1"
+            android:background="@drawable/radiobutton"
+            android:button="@null"
+            android:fontFamily="sans-serif"
+            android:text="@string/category_pants"
+            android:textAlignment="center"
+            android:textAllCaps="true"
+            android:textColor="@drawable/radiobutton_text"
+            android:textSize="12sp"
+            android:typeface="normal" />
+
+        <RadioButton
+            android:id="@+id/shoes"
+            android:layout_width="wrap_content"
+            android:layout_height="32dp"
+            android:layout_weight="1"
+            android:background="@drawable/radiobutton"
+            android:button="@null"
+            android:fontFamily="sans-serif"
+            android:text="@string/category_shoes"
+            android:textAlignment="center"
+            android:textAllCaps="true"
+            android:textColor="@drawable/radiobutton_text"
+            android:textSize="12sp"
+            android:typeface="normal" />
+    </RadioGroup>
+
+    <com.jekz.stepitup.ui.friends.AvatarImage
+        android:id="@+id/model"
+        android:layout_width="@dimen/avatar_item_width"
+        android:layout_height="0dp"
+        android:layout_marginBottom="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/guideline_avatar_bottom"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/avatar_top" />
+
+
+    <ImageView
+        android:id="@+id/avatar_shoes"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:contentDescription="@string/avatar_shoes"
+        android:src="@drawable/blank"
+        app:layout_constraintBottom_toBottomOf="@+id/model"
+        app:layout_constraintEnd_toEndOf="@+id/model"
+        app:layout_constraintStart_toStartOf="@+id/model"
+        app:layout_constraintTop_toTopOf="@+id/model"
+        tools:src="@drawable/boots_0" />
+
+    <ImageView
+        android:id="@+id/avatar_pants"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:contentDescription="@string/avatar_pants"
+        android:src="@drawable/blank"
+        app:layout_constraintBottom_toBottomOf="@+id/model"
+        app:layout_constraintEnd_toEndOf="@+id/model"
+        app:layout_constraintStart_toStartOf="@+id/model"
+        app:layout_constraintTop_toTopOf="@+id/model"
+        tools:src="@drawable/dresspants_0" />
+
+    <ImageView
+        android:id="@+id/avatar_shirt"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:contentDescription="@string/avatar_shirt"
+        android:src="@drawable/blank"
+        app:layout_constraintBottom_toBottomOf="@+id/model"
+        app:layout_constraintEnd_toEndOf="@+id/model"
+        app:layout_constraintStart_toStartOf="@+id/model"
+        app:layout_constraintTop_toTopOf="@+id/model"
+        tools:src="@drawable/spotpjshirtblue_animation" />
+
+    <ImageView
+        android:id="@+id/avatar_hat"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:contentDescription="@string/avatar_hat"
+        android:src="@drawable/blank"
+        app:layout_constraintBottom_toBottomOf="@+id/model"
+        app:layout_constraintEnd_toEndOf="@+id/model"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/model"
+        app:layout_constraintTop_toTopOf="@+id/model"
+        app:layout_constraintVertical_bias="0.0"
+        tools:src="@drawable/jesterhat_0" />
+
+    <android.support.v7.widget.AppCompatImageView
+        android:id="@+id/image_footprint"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_marginBottom="4dp"
+        android:layout_marginTop="4dp"
+        app:layout_constraintBottom_toBottomOf="@+id/text_title"
+        app:layout_constraintStart_toStartOf="@+id/guideline_right_equip_start"
+        app:layout_constraintTop_toTopOf="@+id/text_title"
+        app:srcCompat="@drawable/footprint_icon" />
+
+    <android.support.v7.widget.AppCompatTextView
+        android:id="@+id/text_currency"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="casual"
+        android:gravity="center|start"
+        android:textAlignment="viewStart"
+        android:typeface="normal"
+        app:autoSizeMaxTextSize="19sp"
+        app:autoSizeMinTextSize="14sp"
+        app:autoSizeStepGranularity="2sp"
+        app:autoSizeTextType="uniform"
+        app:layout_constraintBottom_toBottomOf="@+id/image_footprint"
+        app:layout_constraintEnd_toStartOf="@+id/guideline_right_margin"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/image_footprint"
+        app:layout_constraintTop_toTopOf="@+id/image_footprint"
+        app:textAllCaps="true"
+        tools:text="x12312312" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guideline_avatar_bottom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.5121413" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guideline_top_friends"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.55" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guideline_upper_equip_bottom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.28" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guideline_lower_equip_top"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.36" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guideline_left_margin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.052083332" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guideline_left_end"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.27" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/avatar_top"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.13" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guideline_right_margin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.95" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guideline_right_equip_start"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.73" />
+
+    <android.support.v7.widget.AppCompatTextView
+        android:id="@+id/text_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:fontFamily="casual"
+        android:text="@string/customize"
+        android:textAlignment="center"
+        android:textColor="#000"
+        android:textSize="26sp"
+        app:autoSizeTextType="uniform"
+        app:layout_constraintBottom_toTopOf="@+id/avatar_top"
+        app:layout_constraintEnd_toStartOf="@+id/guideline_right_equip_start"
+        app:layout_constraintHorizontal_bias="0.8"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/guideline_title_top"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guideline_title_top"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.027027028" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.17" />
+
+    <ImageButton
+        android:id="@+id/button_change_gender"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/model_change_background"
+        app:layout_constraintBottom_toTopOf="@+id/guideline"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintStart_toStartOf="@+id/model"
+        app:layout_constraintTop_toTopOf="@+id/model" />
+
+    <ImageButton
+        android:id="@+id/button_shop_back"
+        android:layout_width="28dp"
+        android:layout_height="28dp"
+        android:layout_marginEnd="8dp"
+        android:background="@drawable/back_arrow"
+        app:layout_constraintBottom_toBottomOf="@+id/text_title"
+        app:layout_constraintEnd_toStartOf="@+id/text_title"
+        app:layout_constraintHorizontal_bias="0.508"
+        app:layout_constraintStart_toStartOf="@+id/guideline_left_margin"
+        app:layout_constraintTop_toTopOf="@id/text_title"
+        app:layout_constraintVertical_bias="0.35000002" />
+
+
+</android.support.constraint.ConstraintLayout>
